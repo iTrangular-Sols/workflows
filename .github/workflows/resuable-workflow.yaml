@@ -18,14 +18,14 @@ on:
 jobs:
   checkout:
     runs-on: ubuntu-latest
-    #which repo is checked out (caller or called?)
+    #which repo is checked out (caller or called?) -> code of caller is checkedout
     steps:
       - uses: actions/checkout@v3
       - run: ls -a
   log-context-and-inputs:
     runs-on: ubuntu-latest
     steps:
-      # which context is shown (caller or called?)
+      # which context is shown (caller or called?) - caller context is shown here
       - name: Display github context
         run: echo '${{ toJSON(github) }}'
       - name: Display name input
